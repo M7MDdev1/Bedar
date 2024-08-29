@@ -12,7 +12,7 @@ import Documents from "./Pages/Documents";
 import JoinUs from "./Pages/JoinUs";
 import ResearchesAndStudys from "./Pages/ResearchesAndStudys";
 import SaidAboutUs from "./Pages/SaidAboutUs";
-import Auth from "./Pages/auth";
+import Auth from "./Pages/Auth";
 
 const router = createBrowserRouter([
   {

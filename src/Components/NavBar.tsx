@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
-
-export default function NavBar() {
+import { FiMenu } from "react-icons/fi";
+import bedar from "../assets/Bedar.png"
+interface NavBarProps {
+  SideBarVisibility:boolean
+  setSideBarVisibility:React.Dispatch<React.SetStateAction<boolean>>
+}
+export default function NavBar({SideBarVisibility,setSideBarVisibility}:NavBarProps) {
   return (
-    <div className="flex justify-around flex-row-reverse bg-blue-400 p-2">
-      <Link to="/">الرئيسية</Link>
-      <Link to="/AboutUs">من نحن</Link>
-      <Link to="/Documents">الوثائق</Link>
-      <Link to="/ResearchesAndStudys">بحوث ودراسات</Link>
-      <Link to="/JoinUs">ساهم معنا</Link>
-      <Link to="/ContactUs">تواصل معنا</Link>
-      <Link to="/SaidAboutUs">قالوا عنا</Link>
-      <Link to="/Auth">تسجيل دخول</Link>
+    <div className="bg-primary relative overflow-hidden h-28 p-2 flex justify-evenly items-center flex-row-reverse rounded-b-2xl shadow-xl ">
+      <FiMenu onClick={()=> setSideBarVisibility(!SideBarVisibility)} className={`text-white hover:text-gray-500 transition-all`} size={30} />
+      <div className={"w-[7.5rem] select-none"}>
+      <img src={bedar} alt="Bedar.png" />
+      </div>
+      <div></div>
     </div>
   );
 }
