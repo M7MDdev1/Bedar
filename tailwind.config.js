@@ -10,6 +10,13 @@ export default {
         primary: '#c58f35',
         secondary: '#686665',
       },
+      fontFamily: {
+        bahij: ["Bahij", "sans-serif"],
+      },
+      fontWeight: {
+        normal: "400",
+        bold: "700",
+      },
     },
   },
   plugins: [],
