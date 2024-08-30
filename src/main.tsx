@@ -1,10 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Pages/Root";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
@@ -12,7 +9,7 @@ import Documents from "./Pages/Documents";
 import JoinUs from "./Pages/JoinUs";
 import ResearchesAndStudys from "./Pages/ResearchesAndStudys";
 import SaidAboutUs from "./Pages/SaidAboutUs";
-import Auth from "./Pages/auth";
+import Auth from "./Pages/Auth";
 
 const router = createBrowserRouter([
   {
