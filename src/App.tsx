@@ -10,6 +10,7 @@ import Auth from "./Pages/Auth";
 import NavBar from "./Components/NavBar";
 import SideBar from "./Components/SideBar";
 import { useState } from "react";
+import Footer from "./Container/Footer";
 
 function App() {
   const [SideBarVisibility, setSideBarVisibility] = useState<boolean>(false);
@@ -35,6 +36,9 @@ function App() {
         <Route path="/SaidAboutUs" element={<SaidAboutUs />} />
         <Route path="/Auth" element={<Auth />} />
       </Routes>
+
+
+      <Footer/>
     </div>
   );
 }
