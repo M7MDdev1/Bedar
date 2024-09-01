@@ -7,8 +7,8 @@ import JoinUs from "./Pages/JoinUs";
 import ContactUs from "./Pages/ContactUs";
 import SaidAboutUs from "./Pages/SaidAboutUs";
 import Auth from "./Pages/Auth";
-import NavBar from "./Components/NavBar";
-import SideBar from "./Components/SideBar";
+import NavBar from "./Container/NavBar";
+import SideBar from "./Container/SideBar";
 import { useState } from "react";
 import Footer from "./Container/Footer";
 
