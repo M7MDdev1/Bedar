@@ -1,42 +1,51 @@
 import bedar from "../assets/Bedar.png";
-import FastLinks from "../Components/FastLinks";
-import SocailMediaButton from "../Components/SocailMediaButton";
+import NavigationLinks from "../Components/NavigationLinks";
+import SocailMediaButton from "../Components/SocialMediaButton";
 
 export default function Footer() {
   const Links = [
     {
       title: "الرئيسية",
       to: "/",
+      className: "col-span-4",
     },
     {
       title: "عن الجمعية",
       to: "/AboutUs",
+      className: "col-span-4",
+    },
+    {
+      title: "قالوا عنا",
+      to: "/SaidAboutUs",
+      className: "col-span-4",
     },
 
     {
       title: "ساهم معنا",
       to: "/JoinUs",
+      className: "col-span-6 justify-self-end px-6",
     },
-    {
-      title: "قالوا عنا",
-      to: "/SaidAboutUs",
-    },
+
     {
       title: "تواصل معنا",
       to: "/ContactUs",
+      className: "col-span-6 justify-self-start px-6",
     },
-
   ];
   return (
-    <div className=" bg-gradient-to-t from-gray-900 to-neutral-500 h-[26.625rem]">
-      <img src={bedar} alt="Bedar.png" className={" w-[12.625rem] mx-auto"} />
+    <div className=" bg-gradient-to-t from-neutral-500 to-gray-900 h-[26.625rem] rounded-t-md">
+      <img
+        src={bedar}
+        alt="Bedar.png"
+        className={" w-[12.625rem] mx-auto -translate-y-3 object-cover"}
+      />
       <div>
-        <SocailMediaButton />
+        <SocailMediaButton className={" -translate-y-6"} />
 
-        <FastLinks
-            links={Links}
-            className={"text-white grid grid-cols-3 justify-items-center mt-3"}
-          />
+        <NavigationLinks
+          links={Links}
+          className={"grid grid-cols-12 justify-items-center mt-3 gap-y-9"}
+        />
       </div>
     </div>
   );
