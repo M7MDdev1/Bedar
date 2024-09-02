@@ -5,21 +5,22 @@ import SocailMediaButton from "../Components/SocialMediaButton";
 export default function Footer() {
   const Links = [
     {
-      title: "الرئيسية",
-      to: "/",
-      className: "col-span-4",
-    },
-    {
-      title: "عن الجمعية",
-      to: "/AboutUs",
-      className: "col-span-4",
-    },
-    {
       title: "قالوا عنا",
       to: "/SaidAboutUs",
       className: "col-span-4",
     },
 
+    {
+      title: "عن الجمعية",
+      to: "/AboutUs",
+      className: "col-span-4",
+    },
+
+    {
+      title: "الرئيسية",
+      to: "/",
+      className: "col-span-4",
+    },
     {
       title: "ساهم معنا",
       to: "/JoinUs",
