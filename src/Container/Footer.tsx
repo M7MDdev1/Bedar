@@ -42,7 +42,7 @@ export default function Footer() {
       <div>
         <SocailMediaButton 
           className={" -translate-y-6"}
-          links={{
+          SocialMediaLinks={{
             twitter: "https://x.com/BedarYouth",
             instagram: "https://www.instagram.com/bedaryouth",
             youtube: "https://www.youtube.com/@BEDARYOUTH",
