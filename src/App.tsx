@@ -17,7 +17,7 @@ function App() {
   const [SideBarVisibility, setSideBarVisibility] = useState<boolean>(false);
 
   return (
-    <div className={"relative overflow-hidden h-screen"}>
+    <div className={"relative overflow-x-hidden h-screen"}>
 
       <NavBar
         SideBarVisibility={SideBarVisibility}

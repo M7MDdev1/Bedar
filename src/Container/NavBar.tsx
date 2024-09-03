@@ -10,7 +10,7 @@ export default function NavBar({
   setSideBarVisibility,
 }: NavBarProps) {
   return (
-    <div className="bg-primary h-[7.188rem] p-4 relative rounded-b-2xl flex flex-row-reverse items-center">
+    <div className="bg-primary h-[7.188rem] p-4 relative rounded-b-2xl flex flex-row-reverse items-center mb-4">
       <FiMenu
         onClick={() => setSideBarVisibility(!SideBarVisibility)}
         className={`text-white hover:text-gray-500`}
