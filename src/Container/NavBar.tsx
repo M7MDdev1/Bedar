@@ -1,5 +1,6 @@
 import { FiMenu } from "react-icons/fi";
 import bedar from "../assets/BedarShadow.png";
+import { Link } from "react-router-dom";
 interface NavBarProps {
   SideBarVisibility: boolean;
   setSideBarVisibility: React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,11 +16,12 @@ export default function NavBar({
         className={`text-white hover:text-gray-500`}
         size={30}
       />
-      <img
-        src={bedar}
-        alt="Bedar.png"
+      <Link
         className="w-[11.25rem] absolute select-none object-cover left-1/2 transform -translate-x-1/2"
-      />
+        to={"/"}
+      >
+        <img src={bedar} alt="Bedar.png" />
+      </Link>
     </div>
   );
 }
