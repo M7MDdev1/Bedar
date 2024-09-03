@@ -10,6 +10,7 @@ import Auth from "./Pages/Auth";
 import NavBar from "./Container/NavBar";
 import SideBar from "./Container/SideBar";
 import { useState } from "react";
+import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/SaidAboutUs" element={<SaidAboutUs />} />
         <Route path="/Auth" element={<Auth />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
 
