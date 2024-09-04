@@ -1,4 +1,3 @@
-import { IconType } from "react-icons";
 import {
   FaInstagram,
   FaLinkedin,
@@ -7,33 +6,39 @@ import {
 } from "react-icons/fa6";
 import { FiMenu } from "react-icons/fi";
 
-interface IiconProps extends IconType{
+interface IiconProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   Variant: "Twitter" | "Instagram" | "Linkedin" | "Youtube" | "Menu";
-  event?: ()=> {};
 }
-export default function Icon({ Variant, event }: IiconProps) {
-  let IconShape;
 
-  switch (Variant) {
-    case "Twitter":
-      IconShape = FaXTwitter;
-      break;
-    case "Instagram":
-      IconShape = FaInstagram;
-      break;
-    case "Linkedin":
-      IconShape = FaLinkedin;
-      break;
-    case "Youtube":
-      IconShape = FaYoutube;
-      break;
-    case "Menu":
-      IconShape = FiMenu;
-      break;
+const iconMap = {
+  Twitter: FaXTwitter,
+  Instagram: FaInstagram,
+  Linkedin: FaLinkedin,
+  Youtube: FaYoutube,
+  Menu: FiMenu,
+};
 
-    default:
-      return <></>;
-  }
+export default function Icon({
+  Variant,
+  className,
+  href,
+  target,
+  color,
+}: IiconProps) {
+  const IconShape = iconMap[Variant];
 
-  return <IconShape onClick={event} className={`${event && "cursor-pointer"}`}/>;
+  const icon = <IconShape color={color} className={className} />;
+
+  return href ? (
+    <a
+      href={href}
+      target={target}
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {icon}
+    </a>
+  ) : (
+    icon
+  );
 }

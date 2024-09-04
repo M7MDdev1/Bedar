@@ -1,32 +1,39 @@
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
-interface SocialMediaButtonProps extends React.HTMLAttributes<HTMLDivElement>{
-  SocialMediaLinks: {
-    twitter : string;
-    instagram : string;
-    youtube : string;
-    linkedin : string;
-  }
+import Icon from "./Icon";
+
+interface SocialMediaLinks {
+  twitter: string;
+  instagram: string;
+  youtube: string;
+  linkedin: string;
 }
-export default function SocailMediaButton({className, SocialMediaLinks}:SocialMediaButtonProps) {
+
+interface SocialMediaButtonProps extends React.HTMLAttributes<HTMLDivElement> {
+  SocialMediaLinks: SocialMediaLinks;
+}
+
+const socialMediaVariants: Record<keyof SocialMediaLinks, "Twitter" | "Instagram" | "Youtube" | "Linkedin"> = {
+  twitter: "Twitter",
+  instagram: "Instagram",
+  youtube: "Youtube",
+  linkedin: "Linkedin",
+};
+
+export default function SocialMediaButton({
+  className,
+  SocialMediaLinks,
+}: SocialMediaButtonProps) {
   return (
     <div className={`flex justify-center -translate-y-5 ${className}`}>
-      <a href={SocialMediaLinks.twitter} target="_blank" rel="noopener noreferrer">
-        <FaXTwitter color="white" className="mr-3 text-2xl" />
-      </a>
-      <a href={SocialMediaLinks.instagram} target="_blank" rel="noopener noreferrer">
-        <FaInstagram color="white"  className="mr-3  text-2xl" />
-      </a>
-      <a href={SocialMediaLinks.youtube} target="_blank" rel="noopener noreferrer">
-        <FaYoutube color="white"  className="mr-3  text-2xl" />
-      </a>
-      <a href={SocialMediaLinks.linkedin} target="_blank" rel="noopener noreferrer">
-        <FaLinkedin color="white"  className="mr-3  text-2xl" />
-      </a>
+      {Object.entries(SocialMediaLinks).map(([key, url]) => (
+        <Icon
+          key={key}
+          Variant={socialMediaVariants[key as keyof typeof socialMediaVariants]}
+          color="white"
+          className="mr-3 text-2xl"
+          target="_blank"
+          href={url}
+        />
+      ))}
     </div>
   );
 }
