@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Root from "./Pages/Root";
+import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
 import Documents from "./Pages/Documents";
 import ResearchesAndStudys from "./Pages/ResearchesAndStudys";
@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className={"relative overflow-hidden h-screen"}>
-
       <NavBar
         SideBarVisibility={SideBarVisibility}
         setSideBarVisibility={setSideBarVisibility}
@@ -28,7 +27,7 @@ function App() {
         setVisibility={setSideBarVisibility}
       />
       <Routes>
-        <Route path="/" element={<Root />} />
+        <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Documents" element={<Documents />} />
         <Route path="/ResearchesAndStudys" element={<ResearchesAndStudys />} />
@@ -39,8 +38,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-
-      <Footer/>
+      <Footer />
     </div>
   );
 }
