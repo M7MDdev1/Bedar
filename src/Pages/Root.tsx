@@ -1,7 +1,10 @@
+import CardList from "../Container/CardList";
+
 export default function Root() {
   return (
     <div>
-      <h3>الصفحة الرئيسية</h3>
+
+      <CardList />
     </div>
   );
 }

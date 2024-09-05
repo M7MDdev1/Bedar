@@ -44,7 +44,7 @@ export default function SideBar({ visible, setVisibility }: SideBarProps) {
     <div
       className={`absolute flex w-full h-[97%]  flex-row-reverse ${
         !visible && " -z-10 translate-x-full"
-      } duration-500 h-screen bottom-0 right-0 font-bahij`}
+      } duration-500 h-screen bottom-0 right-0`}
     >
       <div className={"w-full bg-secondary rounded-tl-[5.5rem]"}>
         <div className={"p-10 flex flex-col items-center"}>

@@ -42,7 +42,7 @@ export default function SideBar({ visible, setVisibility }: SideBarProps) {
   ];
   return (
     <div
-      className={`absolute flex z-50 w-full h-[97%] flex-row-reverse ${
+      className={`absolute flex z-50 w-full h-full top-0 flex-row-reverse ${
         !visible && " translate-x-full"
       } duration-100 h-screen bottom-0 right-0`}
     >
