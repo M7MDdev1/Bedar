@@ -12,6 +12,7 @@ import SideBar from "./Container/SideBar";
 import { useState } from "react";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
+import CardList from "./Container/CardList";
 
 function App() {
   const [SideBarVisibility, setSideBarVisibility] = useState<boolean>(false);
@@ -39,7 +40,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-
+      <CardList />
       <Footer/>
     </div>
   );
