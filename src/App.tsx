@@ -17,7 +17,7 @@ function App() {
   const [SideBarVisibility, setSideBarVisibility] = useState<boolean>(false);
 
   return (
-    <div className={"relative overflow-hidden h-screen"}>
+    <div className={"relative overflow-hidden font-bahij min-h-screen"}>
 
       <NavBar
         SideBarVisibility={SideBarVisibility}
@@ -38,7 +38,6 @@ function App() {
         <Route path="/Auth" element={<Auth />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-
 
       <Footer/>
     </div>
