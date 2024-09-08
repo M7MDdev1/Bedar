@@ -17,7 +17,9 @@ function App() {
   const [SideBarVisibility, setSideBarVisibility] = useState<boolean>(false);
 
   return (
-    <div className={"relative overflow-hidden h-screen"}>
+
+    <div className={"relative overflow-x-hidden font-bahij min-h-screen"}>
+
       <NavBar
         SideBarVisibility={SideBarVisibility}
         setSideBarVisibility={setSideBarVisibility}
@@ -38,7 +40,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Footer />
+      <Footer/>
     </div>
   );
 }

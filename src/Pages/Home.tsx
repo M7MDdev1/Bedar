@@ -1,11 +1,13 @@
+import Carousel from "../Components/Carousel";
 import CarouselFooter from "../Components/CarouselFooter";
+import CardList from "../Container/CardList";
 
 export default function Home() {
   return (
     <div>
-      <h3>الصفحة الرئيسية</h3>
-
+      <Carousel/>
       <CarouselFooter />
+      <CardList />
     </div>
   );
 }
