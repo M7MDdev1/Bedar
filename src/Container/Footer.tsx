@@ -37,7 +37,7 @@ export default function Footer() {
       <img
         src={bedar}
         alt="Bedar.png"
-        className={" w-[12.625rem] mx-auto -translate-y-3 object-cover"}
+        className={" w-[12.625rem] mx-auto -translate-y-3 object-cover select-none"}
       />
       <div>
         <SocailMediaButton 
