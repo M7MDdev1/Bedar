@@ -2,7 +2,7 @@ import logo from '../assets/BackLogo.png';
 export default function BackgroundLogo() {
     return (
         <div className="h-80 overflow-hidden flex justify-center">
-            <img src={logo} className='w-full object-cover object-bottom'></img>
+            <img src={logo} className='w-[450px] object-cover object-bottom'></img>
         </div>
     );
 }
