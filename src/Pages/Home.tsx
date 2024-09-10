@@ -1,4 +1,5 @@
 import Audience from "../Components/Audience";
+import BackgroundLogo from "../Components/BackgroundLogo";
 import Carousel from "../Components/Carousel";
 import CarouselFooter from "../Components/CarouselFooter";
 import Incubatorbedar from "../Components/Incubatorbedar";
@@ -10,6 +11,7 @@ export default function Home() {
       <Carousel/>
       <CarouselFooter />
       <CardList />
+      <BackgroundLogo />
       <Audience />
       <Incubatorbedar />
     </div>
