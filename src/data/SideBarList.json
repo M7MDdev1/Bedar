@@ -1,0 +1,70 @@
+[
+    {
+        "title": "الرئيسية",
+        "to": "/",
+        "className":"bg-primary text-left px-4 py-2 w-[calc(80%+40px)] -mr-14"
+    },
+    {
+        "title": "عن الجمعية",
+        "childrens" : [
+            {
+                "title": "من نحن ؟",
+                "to": "/AboutUs"
+            },
+            {
+                "title": "رسالتنا",
+                "to": "/OurMessage"
+            },
+            {
+                "title": "مبادراتنا",
+                "to": "/OurInitiatives"
+            },
+            {
+                "title": "الوثائق",
+                "childrens": [
+                    {
+                        "title": "المستندات",
+                        "to": "/Documents"
+                    },
+                    {
+                        "title": "التقارير",
+                        "childrens": [
+                            {
+                                "title" : "تقرير 1",
+                                "to" : "#"
+                            },
+                            {
+                                "title" : "تقرير 2",
+                                "to" : "#"
+                            },
+                            {
+                                "title" : "تقرير 3",
+                                "to" : "#"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "بحوث ودراسات",
+                "to": "/ResearchesAndStudys"
+            },
+            {
+                "title": "مقالات بدار",
+                "to": "/Articles"
+            }
+        ]
+    },
+    {
+        "title": "ساهم معنا",
+        "to": "/JoinUs"
+    },
+    {
+        "title": "أنضم الينا",
+        "to": "/JoinUs"
+    },
+    {
+        "title": "تواصل معنا",
+        "to": "/ContactUs"
+    }
+]

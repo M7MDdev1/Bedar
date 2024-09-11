@@ -1,59 +1,32 @@
 import bedar from "../assets/Bedar.svg";
-import NavigationLinks from "../Components/NavigationLinks";
+import SideBarItems from "../Components/SideBarItems";
+import Links from '../data/SideBarList.json'
+import React, { useState } from 'react';
 
 interface SideBarProps {
   visible: boolean;
   setVisibility: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export default function SideBar({ visible, setVisibility }: SideBarProps) {
-  const Links = [
-    {
-      title: "الرئيسية",
-      to: "/",
-    },
-    {
-      title: "من نحن",
-      to: "/AboutUs",
-    },
-    {
-      title: "الوثائق",
-      to: "/Documents",
-    },
-    {
-      title: "بحوث ودراسات",
-      to: "/ResearchesAndStudys",
-    },
-    {
-      title: "ساهم معنا",
-      to: "/JoinUs",
-    },
-    {
-      title: "تواصل معنا",
-      to: "/ContactUs",
-    },
-    {
-      title: "قالوا عنا",
-      to: "/SaidAboutUs",
-    },
-    {
-      title: "تسجيل دخول",
-      to: "/Auth",
-    },
-  ];
+  const [openAboutUs, setOpenAboutUs] = useState(false);
+  const AboutLinks = [Links[1]];
   return (
     <div
       className={`absolute flex z-50 w-full h-full top-0 flex-row-reverse ${
         !visible && " translate-x-full"
       } duration-100 h-screen bottom-0 right-0`}
     >
-      <div className={"w-full bg-secondary rounded-tl-[5.5rem]"}>
-        <div className={"p-10 flex flex-col items-center"}>
-          <img src={bedar} alt="Bedar.svg" className="w-[7.5rem]" />
+      <div className={"w-full bg-secondary rounded-tl-[3.5rem] mt-[7rem]"}>
+        <div className={`p-2 flex flex-col items-center`}>
+          <img src={bedar} alt="Bedar.svg" className="w-[10.5rem]" />
 
-          <NavigationLinks
-            links={Links}
-            className={"h-72 flex flex-col justify-between items-center"}
-          />
+          {Links.map((link, index) => <SideBarItems key={index} link={link} openAboutUs={openAboutUs} setOpenAboutUs={setOpenAboutUs}/>)}
+        </div>
+        <div className={`p-2 w-6/12 flex z-1 flex-col items-center h-full mt-[7rem] bg-secondary rounded-tl-[3.5rem] transition-all duration-500 ease-in-out
+            absolute top-0 right-0  ${!openAboutUs && "translate-x-full"}`}>
+          <img src={bedar} alt="Bedar.svg" className="w-[10.5rem]" />
+
+          {AboutLinks.map((link, index) => <SideBarItems key={index} link={link} openAboutUs={openAboutUs} setOpenAboutUs={setOpenAboutUs}/>)}
         </div>
       </div>
       <button
