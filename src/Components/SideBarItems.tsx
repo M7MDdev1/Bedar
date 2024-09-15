@@ -29,7 +29,7 @@ export default function SideBarItems({link, openAboutUs, setOpenAboutUs } : Side
                     <FaArrowRight className={`${openAboutUs ? `${() => setOpen(true)}` : "hidden"} absolute right-4 text-lg cursor-pointer transition-transform duration-500 `}
                     onClick={() => setOpenAboutUs ? setOpenAboutUs(!openAboutUs) : null}/>
                 </div>
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out rounded-xl 
+                <div className={`overflow-hidden  transition-all duration-500 ease-in-out rounded-xl 
                     ${open || openAboutUs ? 'max-h-[1000px] opacity-100 bg-[#348b74]' : 'max-h-0 opacity-0'}`}>
                     { link.childrens.map((child, index) => <SideBarItems key={index} link={child} setOpenAboutUs={setOpen} />) }
                 </div>
@@ -37,8 +37,8 @@ export default function SideBarItems({link, openAboutUs, setOpenAboutUs } : Side
         )
     }else{
         return (
-            <a href={link.to || "#"} className={`w-full px-4 py-2 block transition-colors duration-150 rounded-l-full text-white no-underline hover:underline 
-            ${currentPage === "/" && link?.className ? link.className: " text-center"}`}>
+            <a href={link.to || "#"} className={`pl-8 py-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline 
+            ${currentPage === "/" ? "bg-primary": ""}`}>
                 {link.title}
             </a>
         )

@@ -2,7 +2,7 @@
     {
         "title": "الرئيسية",
         "to": "/",
-        "className":"bg-primary text-left px-4 py-2 w-[calc(80%+40px)] -mr-14"
+        "className":"bg-primary"
     },
     {
         "title": "عن الجمعية",
