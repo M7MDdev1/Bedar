@@ -22,23 +22,24 @@ export default function SideBarItems({link, openAboutUs, setOpenAboutUs } : Side
     if(link.childrens){
         return (
             <div className={`w-full relative text-center p-4 block transition-all duration-500 ease-in-out`}>
-                <div className={`text-white text-sm flex justify-center items-center gap-3 ml-6 ${openAboutUs ? "mb-3" : "py-3"}`}>
+                <div className={`text-white text-sm flex justify-center items-center gap-3 ml-6`}>
                     <FaChevronDown className={`${openAboutUs ? "hidden"  : ""} absolute left-8 cursor-pointer transition-transform duration-500 ${open ? 'rotate-180' : ''}`} 
-                    onClick={link.title == "عن الجمعية" && !openAboutUs ? () => setOpenAboutUs(!openAboutUs): () => setOpen(!open)}/>
+                    onClick={link.title == "عن الجمعية"  ? () => setOpenAboutUs(!openAboutUs): () => setOpen(!open)}/>
                     <span className="">{link.title}</span>
-                    <FaArrowRight className={`${openAboutUs ? `${() => setOpen(true)}` : "hidden"} absolute right-4 text-lg cursor-pointer transition-transform duration-500 `}
+                    <FaArrowRight className={`${openAboutUs ? `${() => setOpen(true)}` : "hidden"} absolute right-0 text-lg cursor-pointer transition-transform duration-500 `}
                     onClick={() => setOpenAboutUs ? setOpenAboutUs(!openAboutUs) : null}/>
                 </div>
-                <div className={`overflow-hidden  transition-all duration-500 ease-in-out rounded-xl 
-                    ${open || openAboutUs ? 'max-h-[1000px] opacity-100 bg-[#348b74]' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden  transition-all duration-500 ease-in-out rounded-l-3xl
+                    ${open ? 'max-h-[1000px]  opacity-100' : 'max-h-0 opacity-0'}
+                    ${openAboutUs ? 'max-h-[1000px] opacity-100 bg-[#706e6d] shadow-xl mt-2 -mr-[15%] rounded-l-full' : ""}`}>
                     { link.childrens.map((child, index) => <SideBarItems key={index} link={child} setOpenAboutUs={setOpen} />) }
                 </div>
             </div>
         )
     }else{
         return (
-            <a href={link.to || "#"} className={`pl-8 py-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline 
-            ${currentPage === "/" ? "bg-primary": ""}`}>
+            <a href={link.to || "#"} className={`pl-8 py-2 my-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline 
+            ${currentPage === link.to ? "bg-[#343333]": ""}`}>
                 {link.title}
             </a>
         )
