@@ -12,7 +12,7 @@
 
   export default function NavigationLinks({ links, className }: NavigationLinksProps) {
     return (
-      <div className={`text-white font-bahij ${className}`}>
+      <div className={`text-white ${className}`}>
         {links.map((link,i) => {
           return <Link key={i} to={link.to} className={link.className}>{link.title}</Link>;
         })}
