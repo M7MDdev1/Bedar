@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Img1 from "../assets/CarouselCards/Img1.jpeg";
 import Img2 from "../assets/CarouselCards/Img2.jpg";
 import Img3 from "../assets/CarouselCards/Img3.jpg";
@@ -21,6 +21,15 @@ export default function Carousel() {
       prevIndex === 0 ? Images.length - 1 : prevIndex - 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNextButton();
+    }, 1600);
+
+    return () => clearInterval(interval); // Clean up the interval on unmount
+  }, [index]);
+
 
   return (
     <div className={"relative"}>
