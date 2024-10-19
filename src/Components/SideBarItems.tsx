@@ -31,7 +31,7 @@ export default function SideBarItems({link, openAboutUs, setOpenAboutUs } : Side
                 </div>
                 <div className={`overflow-hidden  transition-all duration-500 ease-in-out rounded-l-3xl
                     ${open ? 'max-h-[1000px]  opacity-100' : 'max-h-0 opacity-0'}
-                    ${openAboutUs ? 'max-h-[1000px] opacity-100 bg-[#706e6d] shadow-xl mt-2 -mr-[15%] rounded-l-full' : ""}`}>
+                    ${openAboutUs ? 'max-h-[1000px] opacity-100 bg-[#706e6d] shadow-xl mt-2 -mr-[15%] rounded-l-[60px]' : ""}`}>
                     { link.childrens.map((child, index) => <SideBarItems key={index} link={child} setOpenAboutUs={setOpen} />) }
                 </div>
             </div>
@@ -39,7 +39,7 @@ export default function SideBarItems({link, openAboutUs, setOpenAboutUs } : Side
     }else{
         return (
             <a href={link.to || "#"} className={`pl-8 py-2 my-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline 
-            ${currentPage === link.to ? "bg-[#343333]": ""}`}>
+            ${currentPage === link.to ? "bg-[#343333] before:contents-[''] before:h-full before:w-4 before:bg-[#c44040] ": ""}`}>
                 {link.title}
             </a>
         )
