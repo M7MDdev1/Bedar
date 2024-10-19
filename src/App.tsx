@@ -9,6 +9,8 @@ import SaidAboutUs from "./Pages/SaidAboutUs";
 import Auth from "./Pages/Auth";
 import NavBar from "./Container/NavBar";
 import SideBar from "./Container/SideBar";
+import TeamLogin from "./Pages/TeamLogin";
+import SingleLogin from "./Pages/SingleLogin";
 import { useState } from "react";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
@@ -36,6 +38,8 @@ function App() {
         <Route path="/JoinUs" element={<JoinUs />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/SaidAboutUs" element={<SaidAboutUs />} />
+        <Route path="/TeamLogin" element={<TeamLogin />} />
+        <Route path="/SingleLogin" element={<SingleLogin />} />
         <Route path="/Auth" element={<Auth />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
