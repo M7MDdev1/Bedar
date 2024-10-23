@@ -6,11 +6,11 @@ export default function JoinUs() {
     <div className="flex flex-col items-center">
       <h2 className="my-8 text-2xl font-bold">انضم إلينا</h2>
       <div className="relative flex flex-col items-center w-full bg-[#C58F3526] pb-32">
-        <a href="/" className="w-48 h-36 flex flex-col items-center justify-center bg-white m-11 pt-4 rounded-2xl border-2 border-dashed border-[#C58F35]">
+        <a href="/TeamLogin" className="w-48 h-36 flex flex-col items-center justify-center bg-white m-11 pt-4 rounded-2xl border-2 border-dashed border-[#C58F35]">
           <img src={team} className='w-17'/>
           <p className='text-xl'>فريق</p>
         </a>
-        <a href="/login" className="w-48 h-36 flex flex-col items-center justify-center bg-white m-11 pt-4 rounded-2xl border-2 border-[#C58F35]">
+        <a href="/SingleLogin" className="w-48 h-36 flex flex-col items-center justify-center bg-white m-11 pt-4 rounded-2xl border-2 border-[#C58F35]">
           <img src={person} className='w-17'/>
           <p className='text-xl'>فرد</p>
         </a>
