@@ -11,25 +11,15 @@ import NavBar from "./Container/NavBar";
 import SideBar from "./Container/SideBar";
 import TeamLogin from "./Pages/TeamLogin";
 import SingleLogin from "./Pages/SingleLogin";
-import { useState } from "react";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
 
 function App() {
-  const [SideBarVisibility, setSideBarVisibility] = useState<boolean>(false);
 
   return (
-
-    <div className={"relative overflow-x-hidden font-bahij min-h-screen"}>
-
-      <NavBar
-        SideBarVisibility={SideBarVisibility}
-        setSideBarVisibility={setSideBarVisibility}
-      />
-      <SideBar
-        visible={SideBarVisibility}
-        setVisibility={setSideBarVisibility}
-      />
+    <div className="relative overflow-x-hidden font-bahij min-h-screen">
+      <NavBar />
+      <SideBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
@@ -43,8 +33,7 @@ function App() {
         <Route path="/Auth" element={<Auth />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-      <Footer/>
+      <Footer />
     </div>
   );
 }
