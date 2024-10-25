@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import Img1 from "../assets/CarouselCards/Img1.jpeg";
-import Img2 from "../assets/CarouselCards/Img2.jpg";
-import Img3 from "../assets/CarouselCards/Img3.jpg";
+import Img1 from "../assets/CarouselCards/Img1.webp";
+import Img2 from "../assets/CarouselCards/Img2.webp";
+import Img3 from "../assets/CarouselCards/Img3.webp";
+import Img4 from "../assets/CarouselCards/Img4.webp";
 import CarouselCard from "./Carousel-Card";
 import CarouselControls from "./Carousel-Controls";
 
-const Images = [Img1, Img2, Img3];
+const Images = [Img1, Img2, Img3,Img4];
 
 export default function Carousel() {
   const [index, setIndex] = useState<number>(0);

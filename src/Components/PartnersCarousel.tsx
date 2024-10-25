@@ -1,11 +1,12 @@
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import Bedar from "../assets/Bedar.svg";
 import { useEffect, useState } from "react";
-import Img1 from "../assets/CarouselCards/Img1.jpeg";
-import Img2 from "../assets/CarouselCards/Img2.jpg";
-import Img3 from "../assets/CarouselCards/Img3.jpg";
+import Img1 from "../assets/Partners/basamah.webp";
+import Img2 from "../assets/Partners/mostasharok.webp";
+import Img3 from "../assets/Partners/Rajhi-charity.webp";
+import Img4 from "../assets/Partners/Rajhi-humanity.webp";
+import Img5 from "../assets/Partners/salem.webp";
 
-const Images = [Img1, Img2, Img3];
+const Images = [Img1, Img2, Img3, Img4, Img5];
 
 export default function Partners() {
   const [index, setIndex] = useState<number>(0);
@@ -32,7 +33,9 @@ export default function Partners() {
 
   return (
     <div className={"mt-48 mb-24"}>
-      <p className={"mx-auto w-fit text-5xl text-[#C58F35] font-bold mb-12"}>شركاؤنا</p>
+      <p className={"mx-auto w-fit text-5xl text-[#C58F35] font-bold mb-12"}>
+        شركاؤنا
+      </p>
 
       <div className={"flex justify-around items-center"}>
         <FaAngleLeft size={34} onClick={handleBackButton} />
