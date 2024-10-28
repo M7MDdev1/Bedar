@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoMdArrowDropright } from "react-icons/io";
-import bedar from '../assets/Contact_BedarLogo.png';
+import bedar from '/assets/Contact_BedarLogo.png';
 
 
 export default function Documents() {

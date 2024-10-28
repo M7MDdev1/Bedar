@@ -1,4 +1,4 @@
-import bedar from '../assets/Contact_BedarLogo.png';
+import bedar from '/assets/Contact_BedarLogo.png';
 import team from '../assets/team_icon.png'
 import person from '../assets/person_icon.png'
 import { Link } from 'react-router-dom';
