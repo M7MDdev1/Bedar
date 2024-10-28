@@ -1,4 +1,4 @@
-import bedar from '../assets/Contact_BedarLogo.png';
+import bedar from '/assets/Contact_BedarLogo.png';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { IoLocationSharp } from "react-icons/io5";

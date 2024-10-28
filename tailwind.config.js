@@ -17,6 +17,12 @@ export default {
         normal: "400",
         bold: "700",
       },
+      backgroundImage: {
+        'custom-radial': 'radial-gradient(50% 49.92% at 50% 50.08%, rgba(255, 255, 255, 0.15) 0%, rgba(197, 143, 53, 0.15) 67.16%)',
+      },
+      boxShadow: {
+        'custom-shadow': '2px 2px 9px 0px rgba(197, 143, 53, 0.68)',
+      },
     },
   },
   plugins: [],
