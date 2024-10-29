@@ -13,7 +13,7 @@ import TeamLogin from "./Pages/TeamLogin";
 import SingleLogin from "./Pages/SingleLogin";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
-import Articles from "./Pages/Articles";
+import Reports from "./Pages/Reports";
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
         <Route path="/TeamLogin" element={<TeamLogin />} />
         <Route path="/SingleLogin" element={<SingleLogin />} />
         <Route path="/Auth" element={<Auth />} />
-        <Route path="/Articles" element={<Articles />} />
+        <Route path="/Reports" element={<Reports />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

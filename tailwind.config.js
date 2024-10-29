@@ -22,6 +22,7 @@ export default {
       },
       boxShadow: {
         'custom-shadow': '2px 2px 9px 0px rgba(197, 143, 53, 0.68)',
+        'alt-custom-shadow': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
       },
     },
   },
