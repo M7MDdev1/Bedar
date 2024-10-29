@@ -2,7 +2,7 @@ import Image from '../assets/BedarForArticles.png'
 
 export default function ArticlesHeader() {
     return (
-        <div className='w-[397px] h-[357px] flex flex-col items-center pt-8 relative rounded-[30px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]'>
+        <div className='w-[100%] h-[357px] flex flex-col items-center pt-8 relative rounded-[30px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]'>
             <img src={Image} className='w-[210px]'/>
             <h2 className='text-[45px]'>مقالات بدار</h2>
             <p className='text-[#C58F35] -mr-3'>..لنا في تنمية الشباب كلمة</p>

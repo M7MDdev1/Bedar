@@ -29,7 +29,7 @@ export default function ArticleContent ({id} : { id: number }) {
                 <span>{article.date}</span> 
                 </div>
             <div className='bg-white p-6 pl-[70px] flex justify-end text-right mb-6 rounded-[20px]'>
-                <p className='w-[264px] text-sm'>
+                <p className='w-[100%] text-sm'>
                     {article.content}
                 </p>
             </div>
