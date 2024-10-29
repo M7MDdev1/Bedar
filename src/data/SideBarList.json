@@ -23,6 +23,10 @@
         "title": "الوثائق",
         "childrens": [
           {
+            "title": "الوثائق",
+            "to": "/Records"
+          },
+          {
             "title": "المستندات",
             "to": "/Documents"
           },

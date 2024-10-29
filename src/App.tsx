@@ -14,6 +14,7 @@ import SingleLogin from "./Pages/SingleLogin";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
 import Reports from "./Pages/Reports";
+import Articles from "./Pages/Articles";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/SingleLogin" element={<SingleLogin />} />
         <Route path="/Auth" element={<Auth />} />
         <Route path="/Reports" element={<Reports />} />
+        <Route path="/Articles" element={<Articles />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
