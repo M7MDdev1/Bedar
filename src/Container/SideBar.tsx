@@ -1,7 +1,7 @@
 import bedar from "../assets/Bedar.svg";
 import SideBarItems from "../Components/SideBarItems";
-import Links from '../data/SideBarList.json';
-import { useState, useEffect } from 'react';
+import Links from "../data/SideBarList.json";
+import { useState, useEffect } from "react";
 import { useSideBarStore } from "../store/useSideBarStore";
 
 export default function SideBar() {
@@ -25,7 +25,12 @@ export default function SideBar() {
         <div className="relative">
           <div className="p-2 flex flex-col items-center transition-all duration-500 ease-in-out">
             {Links.map((link, index) => (
-              <SideBarItems key={index} link={link} openAboutUs={openAboutUs} setOpenAboutUs={setOpenAboutUs} />
+              <SideBarItems
+                key={index}
+                link={link}
+                openAboutUs={openAboutUs}
+                setOpenAboutUs={setOpenAboutUs}
+              />
             ))}
           </div>
           <div
@@ -34,7 +39,12 @@ export default function SideBar() {
             }`}
           >
             {AboutLinks.map((link, index) => (
-              <SideBarItems key={index} link={link} openAboutUs={openAboutUs} setOpenAboutUs={setOpenAboutUs} />
+              <SideBarItems
+                key={index}
+                link={link}
+                openAboutUs={openAboutUs}
+                setOpenAboutUs={setOpenAboutUs}
+              />
             ))}
           </div>
         </div>

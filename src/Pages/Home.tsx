@@ -9,13 +9,13 @@ import CardList from "../Container/CardList";
 export default function Home() {
   return (
     <div>
-      <Carousel/>
+      <Carousel />
       <CarouselFooter />
       <CardList />
       <BackgroundLogo />
       <Audience />
       <Incubatorbedar />
-      <Partners/>
+      <Partners />
     </div>
   );
 }

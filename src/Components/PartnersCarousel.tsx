@@ -13,13 +13,13 @@ export default function Partners() {
 
   const handleNextButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === Images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === Images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const handleBackButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === 0 ? Images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? Images.length - 1 : prevIndex - 1,
     );
   };
 

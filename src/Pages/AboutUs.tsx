@@ -6,10 +6,10 @@ import WhoIsBedar from "../Components/WhoIsBedar";
 export default function AboutUs() {
   return (
     <div>
-      <WhoIsBedar/>
-      <Goals/>
-      <Empowerment/>
-      <OurValues/>
+      <WhoIsBedar />
+      <Goals />
+      <Empowerment />
+      <OurValues />
     </div>
   );
 }

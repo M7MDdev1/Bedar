@@ -6,20 +6,20 @@ import Img4 from "../assets/CarouselCards/Img4.webp";
 import CarouselCard from "./Carousel-Card";
 import CarouselControls from "./Carousel-Controls";
 
-const Images = [Img1, Img2, Img3,Img4];
+const Images = [Img1, Img2, Img3, Img4];
 
 export default function Carousel() {
   const [index, setIndex] = useState<number>(0);
 
   const handleNextButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === Images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === Images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const handleBackButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === 0 ? Images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? Images.length - 1 : prevIndex - 1,
     );
   };
 
@@ -30,7 +30,6 @@ export default function Carousel() {
 
     return () => clearInterval(interval); // Clean up the interval on unmount
   }, [index]);
-
 
   return (
     <div className={"relative"}>

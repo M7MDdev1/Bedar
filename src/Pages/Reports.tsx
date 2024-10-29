@@ -9,17 +9,16 @@ export default function Reports() {
           تقارير بدار
         </h3>
         <img src="\assets\Line.png" alt="Line" className={"w-44"} />
-        </div>
+      </div>
 
-
-        <img
-          src={bedar}
-          className="fixed w-60 top-[20%] left-[50%] -translate-x-1/2 "
-        />
-        <div className="flex flex-col justify-center items-center gap-y-4 pb-5">
-          <Report />
-          <Report />
-        </div>
+      <img
+        src={bedar}
+        className="fixed w-60 top-[20%] left-[50%] -translate-x-1/2 "
+      />
+      <div className="flex flex-col justify-center items-center gap-y-4 pb-5">
+        <Report />
+        <Report />
+      </div>
     </div>
   );
 }

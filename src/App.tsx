@@ -16,7 +16,6 @@ import Footer from "./Container/Footer";
 import Reports from "./Pages/Reports";
 
 function App() {
-
   return (
     <div className="relative overflow-x-hidden font-bahij min-h-screen">
       <NavBar />

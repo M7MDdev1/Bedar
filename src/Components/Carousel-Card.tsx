@@ -1,4 +1,3 @@
-
 interface ICarouselCardProps {
   Img: string;
   index: number;

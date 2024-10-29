@@ -1,13 +1,13 @@
-import { FaEye } from 'react-icons/fa';
-import { LuMail } from 'react-icons/lu';
-import { PiSuitcaseSimpleLight } from 'react-icons/pi';
-import Card from '../Components/Card';
+import { FaEye } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
+import { PiSuitcaseSimpleLight } from "react-icons/pi";
+import Card from "../Components/Card";
 
 export default function CardList() {
   const CardData = [
     {
       Icon: PiSuitcaseSimpleLight,
-      title: 'قضيتنا',
+      title: "قضيتنا",
       description: `انطلاقا من حرص المملكة العربية السعودية وإيمانها
         الراسخ بدور الشباب في تنمية مجتمعاتهم وتحقيق النمو الحضاري
         والرقي الاجتماعي ولما تحتضنه منطقة جازان من كوادر شبابية مبادرة
@@ -17,12 +17,13 @@ export default function CardList() {
     },
     {
       Icon: LuMail,
-      title: 'رسالتنا',
-      description: 'نموذج متميز في تأهيل وتمكين الشباب لإحداث أثر مجتمعي مستدام',
+      title: "رسالتنا",
+      description:
+        "نموذج متميز في تأهيل وتمكين الشباب لإحداث أثر مجتمعي مستدام",
     },
     {
       Icon: FaEye,
-      title: 'رؤيتنا',
+      title: "رؤيتنا",
       description: `جمعية شبابية تعمل على تمكين وتأهيل الشباب ليكونوا قادرين على إحداث
         أثر مجتمعي مستدام من خلال مبادرات نوعية وفقًا لأحدث الممارسات الاحترافية`,
     },

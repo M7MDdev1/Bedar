@@ -22,16 +22,15 @@ export default function CarouselControls({
         className={"text-white shadow-md text-2xl"}
       />
       <div className="my-1">
-
-      {Image.map((_, i) => {
-        return (
-          <GoDotFill
-            key={i}
-            className={`${i === index ? "text-stone-900" : "text-zinc-300"}`}
-            onClick={() => setIndex(i)}
-          />
-        );
-      })}
+        {Image.map((_, i) => {
+          return (
+            <GoDotFill
+              key={i}
+              className={`${i === index ? "text-stone-900" : "text-zinc-300"}`}
+              onClick={() => setIndex(i)}
+            />
+          );
+        })}
       </div>
       <FaCircleChevronDown
         onClick={handleNextButton}

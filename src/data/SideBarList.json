@@ -1,57 +1,57 @@
 [
-    {
-        "title": "الرئيسية",
-        "to": "/",
-        "className":"bg-primary"
-    },
-    {
-        "title": "عن الجمعية",
-        "childrens" : [
-            {
-                "title": "من نحن ؟",
-                "to": "/AboutUs"
-            },
-            {
-                "title": "رسالتنا",
-                "to": "/OurMessage"
-            },
-            {
-                "title": "مبادراتنا",
-                "to": "/OurInitiatives"
-            },
-            {
-                "title": "الوثائق",
-                "childrens": [
-                    {
-                        "title": "المستندات",
-                        "to": "/Documents"
-                    },
-                    {
-                        "title": "التقارير",
-                   "to": "/Reports"
-                    }
-                ]
-            },
-            {
-                "title": "بحوث ودراسات",
-                "to": "/ResearchesAndStudys"
-            },
-            {
-                "title": "مقالات بدار",
-                "to": "/Articles"
-            }
+  {
+    "title": "الرئيسية",
+    "to": "/",
+    "className": "bg-primary"
+  },
+  {
+    "title": "عن الجمعية",
+    "childrens": [
+      {
+        "title": "من نحن ؟",
+        "to": "/AboutUs"
+      },
+      {
+        "title": "رسالتنا",
+        "to": "/OurMessage"
+      },
+      {
+        "title": "مبادراتنا",
+        "to": "/OurInitiatives"
+      },
+      {
+        "title": "الوثائق",
+        "childrens": [
+          {
+            "title": "المستندات",
+            "to": "/Documents"
+          },
+          {
+            "title": "التقارير",
+            "to": "/Reports"
+          }
         ]
-    },
-    {
-        "title": "ساهم معنا",
-        "to": "/SupportUs"
-    },
-    {
-        "title": "أنضم الينا",
-        "to": "/JoinUs"
-    },
-    {
-        "title": "تواصل معنا",
-        "to": "/ContactUs"
-    }
+      },
+      {
+        "title": "بحوث ودراسات",
+        "to": "/ResearchesAndStudys"
+      },
+      {
+        "title": "مقالات بدار",
+        "to": "/Articles"
+      }
+    ]
+  },
+  {
+    "title": "ساهم معنا",
+    "to": "/SupportUs"
+  },
+  {
+    "title": "أنضم الينا",
+    "to": "/JoinUs"
+  },
+  {
+    "title": "تواصل معنا",
+    "to": "/ContactUs"
+  }
 ]
