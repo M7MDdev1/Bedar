@@ -24,11 +24,11 @@
         "childrens": [
           {
             "title": "الوثائق",
-            "to": "/Records"
+            "to": "/Documents"
           },
           {
             "title": "المستندات",
-            "to": "/Documents"
+            "to": "/Records"
           },
           {
             "title": "التقارير",

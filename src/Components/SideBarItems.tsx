@@ -19,7 +19,6 @@ export default function SideBarItems({
   openAboutUs,
   setOpenAboutUs,
 }: SidebarItemProps) {
-  const [currentPage] = useState(window.location.pathname);
   const [open, setOpen] = useState(false);
 
   if (link.childrens) {
@@ -61,8 +60,7 @@ export default function SideBarItems({
     return (
       <Link
         to={link.to || "#"}
-        className={`pl-8 py-2 my-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline 
-            ${currentPage === link.to ? "bg-[#343333] before:contents-[''] before:h-full before:w-4 before:bg-[#c44040] " : ""}`}
+        className={`pl-8 py-2 my-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline `}
       >
         {link.title}
       </Link>
