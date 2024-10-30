@@ -10,8 +10,8 @@ export default function Records() {
         <div className="flex flex-col items-center px-6">
             <h3 className="my-6 text-2xl font-bold text-[#C58F35]">صفحة المستندات</h3>
             <div className="relative flex h-12 w-[100%] border-2 mt-12 border-primary items-center justify-end rounded-[10px]">
-                <input type="text"  placeholder="ابحث عن المستندات بشكل اسرع " className="w-full text-right text-sm placeholder:text-[#1e1e1e78] placeholder:font-bold"/>
-                <RiSearchLine className="m-3 text-lg"/>
+                <input type="text"  placeholder="ابحث عن المستندات بشكل اسرع " className="w-full h-full text-right text-sm outline-none placeholder:text-[#1e1e1e78] placeholder:font-bold"/>
+                <button className="m-3 text-lg"> <RiSearchLine/></button>
             </div>
             <div className="w-full grid gap-6 grid-cols-2 grid-rows-2 mt-[50px] mb-[125px]">
                 <Link to='/' className="w-full h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
@@ -33,7 +33,7 @@ export default function Records() {
             </div>
             <img
                 src={bedar}
-                className="fixed w-60 top-[20%] left-[50%] -translate-x-1/2"
+                className="fixed w-60 top-[20%] left-[50%] -translate-x-1/2 pointer-events-none"
             />
         </div>
     )
