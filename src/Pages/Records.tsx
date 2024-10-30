@@ -9,7 +9,7 @@ export default function Records() {
     return (
         <div className="flex flex-col items-center px-6">
             <h3 className="my-6 text-2xl font-bold text-[#C58F35]">صفحة المستندات</h3>
-            <div className="relative flex h-12 w-[100%] border-2 mt-12 border-primary items-center justify-end rounded-[10px]">
+            <div className="relative flex h-12 w-[100%] border-2 mt-12 pl-2 border-primary items-center justify-end rounded-[10px]">
                 <input type="text"  placeholder="ابحث عن المستندات بشكل اسرع " className="w-full h-full text-right text-sm outline-none placeholder:text-[#1e1e1e78] placeholder:font-bold"/>
                 <button className="m-3 text-lg"> <RiSearchLine/></button>
             </div>
