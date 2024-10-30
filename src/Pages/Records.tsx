@@ -13,27 +13,27 @@ export default function Records() {
                 <input type="text"  placeholder="ابحث عن المستندات بشكل اسرع " className="w-full text-right text-sm placeholder:text-[#1e1e1e78] placeholder:font-bold"/>
                 <RiSearchLine className="m-3 text-lg"/>
             </div>
-            <div className="grid gap-6 grid-cols-2 grid-rows-2 mt-[50px] mb-[125px]">
-                <Link to='/' className="w-44 h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
+            <div className="w-full grid gap-6 grid-cols-2 grid-rows-2 mt-[50px] mb-[125px]">
+                <Link to='/' className="w-full h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
                     <IoDocumentTextOutline className="text-2xl text-primary"/>
                     <h4 className="text-[12px] font-bold w-24 text-center">سياسة خصوصية البيانات</h4>
                 </Link>
-                <Link to='/' className="w-44 h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
+                <Link to='/' className="w-full h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
                     <IoDocumentTextOutline className="text-2xl text-primary"/>
                     <h4 className="text-[12px] font-bold w-24 text-center">سياسة خصوصية البيانات</h4>
                 </Link>
-                <Link to='/' className="w-44 h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
+                <Link to='/' className="w-full h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
                     <IoDocumentTextOutline className="text-2xl text-primary"/>
                     <h4 className="text-[12px] font-bold w-24 text-center">سياسة خصوصية البيانات</h4>
                 </Link>
-                <Link to='/' className="w-44 h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
+                <Link to='/' className="w-full h-20 flex flex-col items-center pt-3 pb-[6px] gap-1 shadow-[2px_2px_5px_0px_rgba(197,143,53,0.68)] rounded-[10px]">
                     <IoDocumentTextOutline className="text-2xl text-primary"/>
                     <h4 className="text-[12px] font-bold w-24 text-center">سياسة خصوصية البيانات</h4>
                 </Link>
             </div>
             <img
                 src={bedar}
-                className="fixed w-60 top-[20%] left-[50%] -translate-x-1/2 -z-10"
+                className="fixed w-60 top-[20%] left-[50%] -translate-x-1/2"
             />
         </div>
     )
