@@ -15,6 +15,7 @@ import NotFound from "./Pages/NotFound";
 import Footer from "./Container/Footer";
 import Reports from "./Pages/Reports";
 import Articles from "./Pages/Articles";
+import Records from "./Pages/Records";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Auth" element={<Auth />} />
         <Route path="/Reports" element={<Reports />} />
         <Route path="/Articles" element={<Articles />} />
+        <Route path="/Records" element={<Records />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
