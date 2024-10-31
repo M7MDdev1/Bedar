@@ -21,11 +21,8 @@
       },
       {
         "title": "الوثائق",
+        "to": "/Documents",
         "childrens": [
-          {
-            "title": "الوثائق",
-            "to": "/Documents"
-          },
           {
             "title": "المستندات",
             "to": "/Records"

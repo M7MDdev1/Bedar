@@ -19,7 +19,6 @@ export default function SideBarItems({
   openAboutUs,
   setOpenAboutUs,
 }: SidebarItemProps) {
-  const [currentPage] = useState(window.location.pathname);
   const [open, setOpen] = useState(false);
 
   if (link.childrens) {
@@ -27,7 +26,7 @@ export default function SideBarItems({
       <div
         className={`w-full relative text-center p-4 block transition-all duration-500 ease-in-out`}
       >
-        <div
+        <Link to={link.to ? link.to : ""}
           className={`text-white text-sm flex justify-center items-center gap-3 ml-6`}
         >
           <FaChevronDown
@@ -45,7 +44,7 @@ export default function SideBarItems({
               setOpenAboutUs ? setOpenAboutUs(!openAboutUs) : null
             }
           />
-        </div>
+        </Link>
         <div
           className={`overflow-hidden  transition-all duration-500 ease-in-out rounded-l-3xl
                     ${open ? "max-h-[1000px]  opacity-100" : "max-h-0 opacity-0"}
@@ -61,8 +60,7 @@ export default function SideBarItems({
     return (
       <Link
         to={link.to || "#"}
-        className={`pl-8 py-2 my-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline 
-            ${currentPage === link.to ? "bg-[#343333] before:contents-[''] before:h-full before:w-4 before:bg-[#c44040] " : ""}`}
+        className={`pl-8 py-2 my-2 block transition-colors duration-150 w-[85%] -mr-[25%] rounded-l-full text-white no-underline hover:underline `}
       >
         {link.title}
       </Link>
