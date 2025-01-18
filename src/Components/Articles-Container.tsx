@@ -1,27 +1,41 @@
-import articlesData from '../data/Articles.json';
-import ArticlesCards from './Articles-Cards';
+import axios from "axios";
+import ArticlesCards from "./Articles-Cards";
+import { useEffect, useState } from "react";
 
 interface Article {
-    id: number;
-    title: string;
+  id: string;
+  auther: string;
+  title: string;
+  date: string;
+  time: string;
+  content: string;
 }
 
-interface ArticlesData {
-    articles: Article[];
+export default function ArticlesContainer() {
+  const [articles, setArticles] = useState<Article[]>([]);
+
+  const getArticles = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_LINK}/articles`);
+      setArticles(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getArticles();
+  }, []);
+
+  return (
+    <div className="flex flex-col gap-[18px] mt-10">
+      {articles.length > 0 ? (
+        articles.map((article) => (
+          <ArticlesCards key={article.id} id={article.id} auther={article.auther} title={article.title} date={article.date} time={article.time} content={article.content}  />
+        ))
+      ) : (
+        <p>Loading articles...</p>
+      )}
+    </div>
+  );
 }
-
-export default function ArticlesContainer () {
-    const { articles } = articlesData as ArticlesData;
-
-    return (
-        <div className="flex flex-col gap-[18px] mt-10">
-            {articles.map((article) => (
-            <ArticlesCards
-                key={article.id}
-                id={article.id}
-                title={article.title}
-            />
-            ))}
-        </div>
-    );
-};
