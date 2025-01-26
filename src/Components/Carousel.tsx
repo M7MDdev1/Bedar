@@ -13,13 +13,13 @@ export default function Carousel() {
 
   const handleNextButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === Images.length - 1 ? 0 : prevIndex + 1,
+      prevIndex === Images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handleBackButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === 0 ? Images.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? Images.length - 1 : prevIndex - 1
     );
   };
 
@@ -40,13 +40,9 @@ export default function Carousel() {
         Image={Images}
         index={index}
       />
-      <div className={"overflow-hidden h-64"}>
+      <div className={"overflow-hidden h-64 sm:h-[37.5rem] flex flex-col items-center"}>
         {Images.map((Img, i) => {
-          return (
-            <div key={i}>
-              <CarouselCard Img={Img} index={index} />
-            </div>
-          );
+          return <CarouselCard key={i} Img={Img} index={index} />;
         })}
       </div>
     </div>

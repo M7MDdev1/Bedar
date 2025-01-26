@@ -5,7 +5,7 @@ export default function CarouselFooter() {
   return (
     <div
       style={{ backgroundImage: `url(${CarouselFooter1})` }}
-      className="bg-no-repeat bg-cover h-56 font-bahij grid grid-cols-3 gap-4 p-6 text-right -translate-y-8"
+      className="bg-no-repeat bg-cover h-56 font-bahij grid sm:hidden grid-cols-3 gap-4 p-6 text-right -translate-y-8"
     >
       <h1 className="text-2xl font-bold col-span-3 ">من هي بدار ؟</h1>
       <Link
