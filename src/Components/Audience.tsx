@@ -4,7 +4,7 @@ export default function Audience() {
   return (
     <div
       className={
-        "bg-[#C58F35]/25 w-full font-bold h-[45.813rem] text-5xl flex flex-col justify-around items-center py-4"
+        "bg-[#C58F35]/25 w-full font-bold h-[45.813rem] text-5xl flex flex-col justify-around items-center py-4 sm:hidden"
       }
     >
       <p className={"text-[#C58F35] "}>جمهورنا</p>

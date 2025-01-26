@@ -8,12 +8,7 @@ export default function CardList() {
     {
       Icon: PiSuitcaseSimpleLight,
       title: "قضيتنا",
-      description: `انطلاقا من حرص المملكة العربية السعودية وإيمانها
-        الراسخ بدور الشباب في تنمية مجتمعاتهم وتحقيق النمو الحضاري
-        والرقي الاجتماعي ولما تحتضنه منطقة جازان من كوادر شبابية مبادرة
-        وفاعلة, انبثقت فكرة جمعية بدار لتنمية الشباب لتكون إحدى منصات
-        المبادرات الشبابية التي تهدف لرعاية وتشجيع المبادرات المجتمعية
-        وغرس مفهوم المواطنة الصالحة والإسهام في تحقيق رؤية المملكة ٢٠٣٠م .`,
+      description: `المواطنة الصالحة من خلال تمكين الشباب والمساهمة في تأهيل وتطوير قدراتهم ليكونوا مبادرين  وفاعلين  و مساهمين  في  تنمية  المجتمع.`,
     },
     {
       Icon: LuMail,
@@ -30,7 +25,7 @@ export default function CardList() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-12 pt-10">
+    <div className="flex sm:flex-row flex-col justify-center items-center gap-12 pt-10">
       {CardData.map((card, index) => (
         <Card
           key={index}
