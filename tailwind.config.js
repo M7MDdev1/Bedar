@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: "#c58f35",
         secondary: "#686665",
+        darkprimary: "#996F29"
       },
       fontFamily: {
         bahij: ["Bahij", "sans-serif"],
