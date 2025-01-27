@@ -13,13 +13,13 @@ export default function Partners() {
 
   const handleNextButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === Images.length - 1 ? 0 : prevIndex + 1,
+      prevIndex === Images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handleBackButton = () => {
     setIndex((prevIndex) =>
-      prevIndex === 0 ? Images.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? Images.length - 1 : prevIndex - 1
     );
   };
 
@@ -32,31 +32,55 @@ export default function Partners() {
   }, [index]);
 
   return (
-    <div className={"mt-48 mb-24"}>
-      <p className={"mx-auto w-fit text-5xl text-[#C58F35] font-bold mb-12"}>
-        شركاؤنا
-      </p>
-
-      <div className={"flex justify-around items-center"}>
-        <FaAngleLeft size={34} onClick={handleBackButton} />
-        <div className={"flex w-64 overflow-hidden"}>
+    <>
+      {/* Desktop */}
+      <div className="hidden sm:block">
+        <h1 className="text-[#6D501F] text-5xl leading-[9rem] font-semibold text-center">
+          شركاء النجاح
+        </h1>
+        <p className="text-3xl text-center">سعداء بالعمل مع كل الجهات و لأفراد</p>
+        <div className={"flex justify-around items-center"}>
           {Images.map((Img, i) => {
             return (
               <div
-                key={i}
                 className={
-                  "w-64 h-80 bg-slate-400 flex flex-grow-0 flex-shrink-0 justify-center items-center rounded-xl transition-all duration-300 object-cover select-none"
+                  "w-64 h-80 flex flex-grow-0 flex-shrink-0 justify-center items-center rounded-xl transition-all duration-300 object-cover select-none"
                 }
-                style={{ transform: `translateX(${`-${index * 100}%`})` }}
               >
-                <img src={Img} className={"w-4/5"} />
+                <img src={Img} key={i} className={"w-4/5"} />
               </div>
             );
           })}
         </div>
-
-        <FaAngleRight size={34} onClick={handleNextButton} />
       </div>
-    </div>
+
+      {/* Mobile */}
+      <div className={"mt-48 mb-24 sm:hidden"}>
+        <p className={"mx-auto w-fit text-5xl text-[#C58F35] font-bold mb-12"}>
+          شركاؤنا
+        </p>
+
+        <div className={"flex justify-around items-center"}>
+          <FaAngleLeft size={34} onClick={handleBackButton} />
+          <div className={"flex w-64 overflow-hidden"}>
+            {Images.map((Img, i) => {
+              return (
+                <div
+                  key={i}
+                  className={
+                    "w-64 h-80 bg-slate-400 flex flex-grow-0 flex-shrink-0 justify-center items-center rounded-xl transition-all duration-300 object-cover select-none"
+                  }
+                  style={{ transform: `translateX(${`-${index * 100}%`})` }}
+                >
+                  <img src={Img} className={"w-4/5"} />
+                </div>
+              );
+            })}
+          </div>
+
+          <FaAngleRight size={34} onClick={handleNextButton} />
+        </div>
+      </div>
+    </>
   );
 }
