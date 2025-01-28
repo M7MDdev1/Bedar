@@ -37,9 +37,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="hidden sm:flex h-[628px] bg-darkprimary flex-col items-center gap-4 mx-14 rounded-t-[32px] px-[50px] py-[30px]">
+      <div className="hidden sm:flex min-h-[628px] bg-darkprimary flex-col items-center gap-4 mx-14 rounded-t-[32px] px-[50px] py-[30px]">
             <div className="flex justify-end w-full gap-[108px] ">
-              <div className="w-[675px] flex gap-[145px] text-white text-right text-sm font-medium">
+              <div className="w-[675px] flex gap-[21%] text-white text-right text-sm font-medium">
                 {
                   Object.entries(Links).map(([key, value]) => (
                     <div key={key} className="flex flex-col gap-4 min-w-[75px]">

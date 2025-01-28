@@ -1,8 +1,8 @@
-import twitter from "../assets/socialIcons/twitter.png";
-import linkedin from "../assets/socialIcons/Linkdn.png";
-import youtube from "../assets/socialIcons/youtube.png";
-import snapchat from "../assets/socialIcons/snapchat.png";
-import instagram from "../assets/socialIcons/instagram.png";
+import { RiTwitterXFill } from "react-icons/ri";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { FaYoutube } from "react-icons/fa6";
+import { FaSnapchatGhost } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
 
 interface SocialMediaButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   SocialMediaLinks: {
@@ -24,35 +24,35 @@ export default function SocailMediaFooter({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={twitter} alt="" />
+        <IoLogoInstagram className="bg-white text-primary rounded-full text-[30px] border-[5px] border-white"/>
       </a>
       <a
         href={SocialMediaLinks.linkedin}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={linkedin} alt="" />
+        <FaSnapchatGhost className="bg-white text-primary rounded-full text-[30px] border-[5px] border-white"/>
         </a>
       <a
         href={SocialMediaLinks.youtube}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={youtube} alt="" />
+        <FaYoutube className="bg-white text-primary rounded-full text-[30px] border-[5px] border-white"/>
         </a>
       <a
         href={SocialMediaLinks.snapchat}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={snapchat} alt="" />
+        <TiSocialLinkedin className="bg-white text-primary rounded-full text-[30px] border-[5px] border-white"/>
         </a>
       <a
         href={SocialMediaLinks.instagram}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={instagram} alt="" />
+        <RiTwitterXFill className="bg-white text-primary rounded-full text-[30px] border-[5px] border-white"/>
         </a>
     </div>
   );
