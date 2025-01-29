@@ -16,6 +16,7 @@ import Footer from "./Container/Footer";
 import Reports from "./Pages/Reports";
 import Articles from "./Pages/Articles";
 import Records from "./Pages/Records";
+import InvestWithUs from "./Pages/InvestWithUs";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Reports" element={<Reports />} />
         <Route path="/Articles" element={<Articles />} />
         <Route path="/Records" element={<Records />} />
+        <Route path="/InvestWithUs" element={<InvestWithUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
