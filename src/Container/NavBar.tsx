@@ -5,22 +5,28 @@ import { useSideBarStore } from "../store/useSideBarStore";
 import { BsPhone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
+import { useState } from "react";
 
 export default function NavBar() {
   const { toggleVisibility } = useSideBarStore();
-
+const [isHover, setIsHover] = useState<boolean>();
   return (
     <>
     {/* Desktop */}
     <div className="sm:flex flex-row-reverse justify-between items-center hidden h-52 ">
       <img src="assets\Bedar_colored.svg" alt="Bedar" className="h-52"/>
       <ul className="flex flex-row-reverse gap-x-8">
-        <li>الرئيسية</li>
-        <li>عن الجمعية</li>
-        <li>الحوكمة</li>
-        <li>انضم الينا</li>
-        <li>تواصل معنا</li>
-        <li>المزيد</li>
+        <Link to={"/"}>الرئيسية</Link>
+        <Link to={"AboutUs"}>عن الجمعية</Link>
+        <Link to={"Records"}>الحوكمة</Link>
+        <Link to={"JoinUs"}>انضم الينا</Link>
+        <Link to={"ContactUs"}>تواصل معنا</Link>
+        <Link to={""} >
+        <p>المزيد</p>
+        <div className={`${!isHover && "hidden"}`}>
+Hi
+        </div>
+        </Link>
       </ul>
       <div className="flex gap-x-8 items-center ml-10">
       <BsPhone size={25} />
