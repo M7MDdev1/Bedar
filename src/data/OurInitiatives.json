@@ -1,0 +1,50 @@
+[
+    {
+        "title": "برنامج رصين",
+        "img": "image 10.png",
+        "cost": "50",
+        "beneficiaries": "40"
+    },
+    {
+        "title": "مبادرة متكأ",
+        "img": "image 11.png",
+        "cost": "90",
+        "beneficiaries": "80"
+    },
+    {
+        "title": "برنامج ماي ستايل",
+        "img": "image 12.png",
+        "cost": "153",
+        "beneficiaries": "25"
+    },
+    {
+        "title": "برنامج نماء",
+        "img": "image 13.png",
+        "cost": "40",
+        "beneficiaries": "30"
+    },
+    {
+        "title": "مشروع إكسير",
+        "img": "image 14.png",
+        "cost": "98",
+        "beneficiaries": "100"
+    },
+    {
+        "title": "مشروع قادر",
+        "img": "image 15.png",
+        "cost": "150",
+        "beneficiaries": "30"
+    },
+    {
+        "title": "برنامج واحد من مائة",
+        "img": "image 16.png",
+        "cost": "27",
+        "beneficiaries": "50"
+    },
+    {
+        "title": "مشروع منقذ",
+        "img": "image 17.png",
+        "cost": "40",
+        "beneficiaries": "30"
+    }
+]
