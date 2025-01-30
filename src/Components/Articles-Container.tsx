@@ -13,6 +13,7 @@ interface Article {
 
 export default function ArticlesContainer() {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [search, setSearch] = useState("");
 
   const getArticles = async () => {
     try {
@@ -29,9 +30,19 @@ export default function ArticlesContainer() {
     getArticles();
   }, []);
 
+  const filteredArticles = articles.filter((article) =>
+    article.title.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="flex flex-col gap-[18px] sm:gap-8 mt-10 sm:mx-20 sm:grid-cols-3 sm:grid">
-      {articles.length > 0 ? (
+      <input
+        type="text"
+        placeholder="ابحث بعنوان المقالة للوصول بشكل اسرع"
+        className="w-[705px] col-span-3 mx-auto hidden sm:block px-4 py-3 rounded-lg text-right outline-none placeholder-primary border border-primary mb-[124px]"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      {filteredArticles.length > 0 ? (
         articles.map((article) => (
           <ArticlesCards
             key={article.id}
