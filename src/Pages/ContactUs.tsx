@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { HiEnvelope } from "react-icons/hi2";
+import HeaderImage from "../Components/Header-Image";
 
 export default function ContactUs() {
   const Fields = [
@@ -45,23 +46,13 @@ export default function ContactUs() {
     <>
       {/* Desktop */}
       <div className="hidden sm:flex flex-col items-center justify-center">
-        <div
-          style={{
-            background: `url('assets/ContactUs.png')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="w-[83rem] h-[36.6875rem] relative"
-        >
-          <div className="w-[34.75rem] h-[8.8125rem] rounded-[0rem_2.5rem] absolute top-[13.56rem] left-[8.75rem] bg-[#BD8A3D] text-[3.4375rem] flex items-center justify-center text-white font-semibold">
-            الشكاوى و الاقتراحات
-          </div>
 
-          <div className="w-[24.4375rem] h-[6.1875rem] rounded-[2.5rem_0rem] absolute top-[23.69rem] left-[5.31rem] bg-[#BD8A3D] text-[2.5rem] flex items-center justify-center text-white font-semibold">
-            سعداء بالرد عليك
-          </div>
-        </div>
+        <HeaderImage
+          src="assets/ContactUs.png"
+          Title="الشكاوى و الاقتراحات"
+          subTitle="سعداء بالرد عليك"
+        />
+        
         <div className="px-10 py-16 gap-y-5 flex flex-col rounded-[2.5rem_0rem] border border-[#d5c2a833] shadow-contactUsShadow w-[49.1875rem] items-center justify-center mb-96">
           <h1 className="text-[#262117] font-bahij text-5xl font-semibold leading-[3.28125rem]">
             تواصل معنا
