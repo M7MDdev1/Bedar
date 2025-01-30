@@ -16,7 +16,9 @@ export default function ArticlesContainer() {
 
   const getArticles = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_LINK}/articles`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_LINK}/articles`
+      );
       setArticles(response.data);
     } catch (error) {
       console.error(error);
@@ -28,10 +30,18 @@ export default function ArticlesContainer() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[18px] mt-10">
+    <div className="flex flex-col gap-[18px] sm:gap-8 mt-10 sm:mx-20 sm:grid-cols-3 sm:grid">
       {articles.length > 0 ? (
         articles.map((article) => (
-          <ArticlesCards key={article.id} id={article.id} auther={article.auther} title={article.title} date={article.date} time={article.time} content={article.content}  />
+          <ArticlesCards
+            key={article.id}
+            id={article.id}
+            auther={article.auther}
+            title={article.title}
+            date={article.date}
+            time={article.time}
+            content={article.content}
+          />
         ))
       ) : (
         <p>Loading articles...</p>

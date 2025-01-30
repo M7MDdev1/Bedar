@@ -21,7 +21,7 @@ export default function CarouselControls({
         onClick={handleBackButton}
         className={"text-white shadow-md text-2xl sm:hidden"}
       />
-      <div className="my-1 flex">
+      <div className="my-1 flex sm:flex-row flex-col">
         {Image.map((_, i) => {
           return (
             <GoDotFill
